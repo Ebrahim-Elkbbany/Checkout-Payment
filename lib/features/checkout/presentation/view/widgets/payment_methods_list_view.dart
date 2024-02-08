@@ -1,4 +1,3 @@
-
 import 'package:checkout_payment/features/checkout/presentation/view/widgets/payment_item_method.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -11,11 +10,11 @@ class PaymentMethodsListView extends StatefulWidget {
 }
 
 class _PaymentMethodsListViewState extends State<PaymentMethodsListView> {
-  final List<String> methodsImages =const[
+  final List<String> methodsImages = const [
     'assets/images/card.svg',
     'assets/images/paypal.svg'
   ];
-  int selectedIndex =0;
+  int selectedIndex = 0;
   bool isSelected = true;
   @override
   Widget build(BuildContext context) {
@@ -31,15 +30,15 @@ class _PaymentMethodsListViewState extends State<PaymentMethodsListView> {
             itemBuilder: (context, index) => PaymentItemMethod(
               onTap: () {
                 selectedIndex = index;
-                setState(() {
-
-                });
+                setState(() {});
               },
-              isSelected: selectedIndex ==index,
+              isSelected: selectedIndex == index,
               image: methodsImages[index],
-            ), separatorBuilder: (context, index) => SizedBox(
-            width: 20.w,
-          ),),
+            ),
+            separatorBuilder: (context, index) => SizedBox(
+              width: 20.w,
+            ),
+          ),
         ),
       ),
     );

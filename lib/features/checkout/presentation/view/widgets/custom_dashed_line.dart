@@ -13,7 +13,7 @@ class CustomDashedLine extends StatelessWidget {
         30,
         (index) => Expanded(
           child: Padding(
-            padding:  EdgeInsets.symmetric(horizontal: 2.w),
+            padding: EdgeInsets.symmetric(horizontal: 2.w),
             child: Container(
               color: const Color(0xffB8B8B8),
               height: 2,

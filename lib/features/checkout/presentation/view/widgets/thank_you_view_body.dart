@@ -11,7 +11,8 @@ class ThankYouViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding:  EdgeInsets.only(left: 20.w,right: 20.w,top: 50.h,bottom: 20.h),
+        padding:
+            EdgeInsets.only(left: 20.w, right: 20.w, top: 50.h, bottom: 20.h),
         child: SizedBox(
           height: 720.h,
           child: Stack(
@@ -36,7 +37,7 @@ class ThankYouViewBody extends StatelessWidget {
                   child: const CircleAvatar(
                     backgroundColor: Colors.white,
                   )),
-               Positioned(
+              Positioned(
                 top: -50.h,
                 left: 0,
                 right: 0,

@@ -1,8 +1,13 @@
 import 'package:checkout_payment/core/widgets/custom_button.dart';
+import 'package:checkout_payment/features/checkout/data/repos/checkout_repo.dart';
+import 'package:checkout_payment/features/checkout/data/repos/checkout_repo_impl.dart';
+import 'package:checkout_payment/features/checkout/presentation/manager/payment_cubit.dart';
 import 'package:checkout_payment/features/checkout/presentation/view/payment_details_view.dart';
 import 'package:checkout_payment/features/checkout/presentation/view/widgets/order_details.dart';
+import 'package:checkout_payment/features/checkout/presentation/view/widgets/payment_methods_bottom_sheet.dart';
 import 'package:checkout_payment/features/checkout/presentation/view/widgets/total_price.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MyCartViewBody extends StatelessWidget {
@@ -58,17 +63,21 @@ class MyCartViewBody extends StatelessWidget {
           CustomButton(
             buttonName: 'Complete Payment',
             onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                return const PaymentDetailsView();
-              }));
+              // Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+              //   return const PaymentDetailsView();
+              // }));
 
-              // showModalBottomSheet(
-              //     context: context,
-              //     shape: RoundedRectangleBorder(
-              //         borderRadius: BorderRadius.circular(16)),
-              //     builder: (context) {
-              //       return const PaymentMethodsBottomSheet();
-              //     });
+              showModalBottomSheet(
+                context: context,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16)),
+                builder: (context) {
+                  return BlocProvider(
+                    create: (context) => PaymentCubit(CheckoutRepoImpl()),
+                    child: const PaymentMethodsBottomSheet(),
+                  );
+                },
+              );
             },
           ),
           SizedBox(
