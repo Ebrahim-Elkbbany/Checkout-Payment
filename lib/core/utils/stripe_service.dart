@@ -5,7 +5,7 @@ import 'package:checkout_payment/features/checkout/data/models/init_payment_shee
 import 'package:checkout_payment/features/checkout/data/models/payment_intent_input_model.dart';
 import 'package:checkout_payment/features/checkout/data/models/payment_intent_model/payment_intent_model.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
-
+//Stripe service
 class StripeService {
   final ApiService apiService = ApiService();
 
