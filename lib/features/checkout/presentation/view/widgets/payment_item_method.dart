@@ -3,7 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class PaymentItemMethod extends StatelessWidget {
-  const PaymentItemMethod({super.key, required this.image, required this.isSelected, required this.onTap});
+  const PaymentItemMethod(
+      {super.key,
+      required this.image,
+      required this.isSelected,
+      required this.onTap});
   final String image;
   final bool isSelected;
   final void Function() onTap;
@@ -18,13 +22,15 @@ class PaymentItemMethod extends StatelessWidget {
         height: 62.h,
         decoration: ShapeDecoration(
           shape: RoundedRectangleBorder(
-            side: BorderSide(width: 1.50.w, color: isSelected ? const Color(0xFF34A853) : Colors.grey),
+            side: BorderSide(
+                width: 1.50.w,
+                color: isSelected ? const Color(0xFF34A853) : Colors.grey),
             borderRadius: BorderRadius.circular(15),
           ),
-          shadows:  [
+          shadows: [
             BoxShadow(
               color: isSelected ? const Color(0xFF34A853) : Colors.grey,
-              blurRadius: isSelected ? 4 :1,
+              blurRadius: isSelected ? 4 : 1,
               offset: const Offset(0, 0),
               spreadRadius: 0,
             )

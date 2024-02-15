@@ -11,7 +11,7 @@ class CardInfoWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 305.w,
-      padding:  EdgeInsets.symmetric(vertical: 16.h, horizontal: 22.w),
+      padding: EdgeInsets.symmetric(vertical: 16.h, horizontal: 22.w),
       decoration: ShapeDecoration(
         color: Colors.white,
         shape: RoundedRectangleBorder(
@@ -21,13 +21,13 @@ class CardInfoWidget extends StatelessWidget {
       child: Row(
         children: [
           SvgPicture.asset('assets/images/master_card.svg'),
-           SizedBox(
+          SizedBox(
             width: 23.w,
           ),
           Text.rich(
             TextSpan(
               children: [
-                 TextSpan(
+                TextSpan(
                   text: 'Credit Card ',
                   style: TextStyle(
                     color: Colors.black,

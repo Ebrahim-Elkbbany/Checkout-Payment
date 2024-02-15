@@ -3,22 +3,24 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton(
-      {Key? key,
-      required this.buttonName,
-      this.onPressed,
-       this.height,
-       this.width=double.infinity,
-       this.radius, this.style,
-      })
-      : super(key: key);
+  const CustomButton({
+    Key? key,
+    required this.buttonName,
+    this.onPressed,
+    this.height,
+    this.width = double.infinity,
+    this.radius,
+    this.style,
+    this.isLoading = false,
+  }) : super(key: key);
 
   final String buttonName;
   final void Function()? onPressed;
-  final double ?height;
-  final double ?width;
-  final double ?radius;
+  final double? height;
+  final double? width;
+  final double? radius;
   final TextStyle? style;
+  final bool isLoading;
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +36,7 @@ class CustomButton extends StatelessWidget {
           ),
         ),
         child: Center(
-          child: Text(
+          child: isLoading ? const CircularProgressIndicator(): Text(
             buttonName,
             style: style ?? Style.font22mediumBlack,
             textAlign: TextAlign.center,

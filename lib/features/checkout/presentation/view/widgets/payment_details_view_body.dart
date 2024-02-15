@@ -48,9 +48,15 @@ class _PaymentDetailsViewBodyState extends State<PaymentDetailsViewBody> {
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
                     formKey.currentState!.save();
-                    Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) {
-                      return const ThankYouView();
-                    },),(route) => false,);
+                    Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return const ThankYouView();
+                        },
+                      ),
+                      (route) => false,
+                    );
                     log('payment');
                   } else {
                     autoValidateMode = AutovalidateMode.always;

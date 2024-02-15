@@ -8,7 +8,7 @@ class CustomCheckIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  CircleAvatar(
+    return CircleAvatar(
       radius: 50,
       backgroundColor: const Color(0xFFD9D9D9),
       child: CircleAvatar(

@@ -22,7 +22,7 @@ class ThankYouCard extends StatelessWidget {
         ),
       ),
       child: Padding(
-        padding:  EdgeInsets.only(top: 60.h + 16.h, left: 22.w, right: 22.w),
+        padding: EdgeInsets.only(top: 60.h + 16.h, left: 22.w, right: 22.w),
         child: Column(
           children: [
             Text(
@@ -35,33 +35,33 @@ class ThankYouCard extends StatelessWidget {
               textAlign: TextAlign.center,
               style: Style.font20RegularBlackOpacity,
             ),
-             SizedBox(
+            SizedBox(
               height: 42.h,
             ),
             const PaymentItemInfo(
               title: 'Date',
               value: '01/24/2023',
             ),
-             SizedBox(
+            SizedBox(
               height: 20.h,
             ),
             const PaymentItemInfo(
               title: 'Time',
               value: '10:15 AM',
             ),
-             SizedBox(
+            SizedBox(
               height: 20.h,
             ),
             const PaymentItemInfo(
               title: 'To',
               value: 'Sam Louis',
             ),
-             Divider(
+            Divider(
               height: 60.h,
               thickness: 2,
             ),
             const TotalPrice(name: 'Total', value: r'$50.97'),
-             SizedBox(
+            SizedBox(
               height: 30.h,
             ),
             const CardInfoWidget(),
@@ -69,7 +69,7 @@ class ThankYouCard extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                 Icon(
+                Icon(
                   FontAwesomeIcons.barcode,
                   size: 64.w,
                 ),
