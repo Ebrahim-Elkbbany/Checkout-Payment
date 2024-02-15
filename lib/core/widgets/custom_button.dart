@@ -36,11 +36,13 @@ class CustomButton extends StatelessWidget {
           ),
         ),
         child: Center(
-          child: isLoading ? const CircularProgressIndicator(): Text(
-            buttonName,
-            style: style ?? Style.font22mediumBlack,
-            textAlign: TextAlign.center,
-          ),
+          child: isLoading
+              ? const CircularProgressIndicator()
+              : Text(
+                  buttonName,
+                  style: style ?? Style.font22mediumBlack,
+                  textAlign: TextAlign.center,
+                ),
         ),
       ),
     );
