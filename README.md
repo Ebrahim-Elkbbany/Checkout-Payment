@@ -1,16 +1,7 @@
-# checkout_payment
+# Checkout Payment
 
-A new Flutter project.
+Bulid Custom Payments Sreens With Stripe and Paypal.
 
-## Getting Started
+## Screenshots 📸
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot 2024-04-14 191635](https://github.com/Ebrahim-Elkbbany/Checkout-Payment/assets/136932497/6325aeba-e7eb-4784-bca1-570cf26a8566)
